@@ -31,3 +31,14 @@ class compareImg :
                       good.append([m]) # Draw first 10 matches. knn_image = cv2.drawMatchesKnn(img1, kp1, img2, kp2, good, None, flags=2)
                       plt.imshow(knn_image) 
                       plt.show()
+
+            filepath1 = r"C:\Users\gjakdoo\Desktop\agu\agu1.jpg" 
+            filepath2 = r"C:\Users\gjakdoo\Desktop\agu\agu2.jpg"
+
+             img1 = self.readImg(filepath1)
+             img2 = self.readImg(filepath2) 
+            self.diffImg(img1, img2) 
+if __name__ == '__main__':
+     cImg = compareImg() 
+     cImg.run()
+
